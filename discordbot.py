@@ -25,7 +25,7 @@ import discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = "Nzg0OTU3MzQ0NTYzMDY4OTc4.X8w2fg.xOiagkrR3o9CfONhkCbXj1Iihkw" #トークン
+TOKEN = "Nzg0OTU3MzQ0NTYzMDY4OTc4.X8w2fg.0V6kFbNCQwnxO93o4LboxobUUNU" #トークン
 CHANNEL_ID = 804259431634042910 #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
