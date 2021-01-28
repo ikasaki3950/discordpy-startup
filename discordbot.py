@@ -20,28 +20,17 @@ async def ping(ctx):
 @bot.command()
 async def にゃーん(ctx):
     await ctx.send('にゃーん')
-#coding:UTF-8
-import discord
-from discord.ext import tasks
-from datetime import datetime 
-
-TOKEN =  os.environ['DISCORD_BOT_TOKEN'] #トークン
-CHANNEL_ID = 804259431634042910 #チャンネルID
-# 接続に必要なオブジェクトを生成
-client = discord.Client()
-
-# 60秒に一回ループ
-@tasks.loop(seconds=60)
-async def loop():
-    # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '07:00':
-        channel = client.get_channel(804259431634042910)
-        await channel.send('おはよう')  
-
-#ループ処理実行
-loop.start()
-# Botの起動とDiscordサーバーへの接続
-client.run()
+  
+@bot.command()
+async def おはよー(ctx):
+    await ctx.send('おっはー！！')
+    
+@bot.command()
+async def こんにちは(ctx):
+    await ctx.send('こんちゃ！！')
+    
+@bot.command()
+async def こんばんは(ctx):
+    await ctx.send('こんばんわに～')
 bot.run(token)
 
