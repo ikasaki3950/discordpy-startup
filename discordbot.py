@@ -45,7 +45,7 @@ async def on_message(message):
 
 @client.event
 async def on_message(message):
-    if "#iおみくじ" in message.content:
+    if "おみくじ" in message.content:
         word_list = ["大吉","中吉","小吉"]
         await message.channel.send(random.choice(word_list))
 
