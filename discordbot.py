@@ -14,29 +14,14 @@ async def にゃーん(ctx):
     await ctx.send('にゃーん')
   
 
-@client.event
-async def on_message(message):
-    # 「おはよう」で始まるか調べる
-    if message.content.startswith("おはよー"):
-        # 送り主がBotだった場合反応したくないので
-        if client.user != message.author:
-            # メッセージを書きます
-            m = " + message.author.name + "さんおっはー！！"
-            # メッセージが送られてきたチャンネルへメッセージを送ります
-            await message.channel.send(m)
+@bot.command()
+async def おはよー(ctx):
+    await ctx.send('おっはー！！！') 
 
-@client.event
-async def on_message(message):
-    # 「おはよう」で始まるか調べる
-    if message.content.startswith("おはよう"):
-        # 送り主がBotだった場合反応したくないので
-        if client.user != message.author:
-            # メッセージを書きます
-            m = " + message.author.name + "さんおっはー！！"
-            # メッセージが送られてきたチャンネルへメッセージを送ります
-            await message.channel.send(m)
-
-    
+@bot.command()
+async def おはよう(ctx):
+    await ctx.send('おっはー！！！') 
+     
 @bot.command()
 async def こんちわー(ctx):
     await ctx.send('こんちゃ！！')  
@@ -57,3 +42,11 @@ async def on_message(message):
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
         await message.channel.send('にゃーん')
+
+@client.event
+async def on_message(message):
+    if "#iおみくじ" in message.content:
+        word_list = ["大吉","中吉","小吉"]
+        await message.channel.send(random.choice(word_list))
+
+client.run("TOKEN")
