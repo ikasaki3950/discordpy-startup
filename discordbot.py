@@ -13,13 +13,29 @@ async def ping(ctx):
 async def にゃーん(ctx):
     await ctx.send('にゃーん')
   
-@bot.command()
-async def おはよー(ctx):
-    await ctx.send('おっはー！！')
-    
-@bot.command()
-async def おはよう(ctx):
-    await ctx.send('おっはー！！')
+
+@client.event
+async def on_message(message):
+    # 「おはよう」で始まるか調べる
+    if message.content.startswith("おはよー"):
+        # 送り主がBotだった場合反応したくないので
+        if client.user != message.author:
+            # メッセージを書きます
+            m = " + message.author.name + "さんおっはー！！"
+            # メッセージが送られてきたチャンネルへメッセージを送ります
+            await message.channel.send(m)
+
+@client.event
+async def on_message(message):
+    # 「おはよう」で始まるか調べる
+    if message.content.startswith("おはよう"):
+        # 送り主がBotだった場合反応したくないので
+        if client.user != message.author:
+            # メッセージを書きます
+            m = " + message.author.name + "さんおっはー！！"
+            # メッセージが送られてきたチャンネルへメッセージを送ります
+            await message.channel.send(m)
+
     
 @bot.command()
 async def こんちわー(ctx):
