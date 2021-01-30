@@ -34,4 +34,3 @@ async def こんにちは(ctx):
 async def こんばんは(ctx):
     await ctx.send('こんばんわに～')
 bot.run(token)
-Nzg0OTU3MzQ0NTYzMDY4OTc4.X8w2fg.M6LzmaIc6bDz0E7MUOAr9CB_mag
