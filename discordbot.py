@@ -33,6 +33,11 @@ async def こんにちは(ctx):
 @bot.command()
 async def こんばんは(ctx):
     await ctx.send('こんばんわに～')
+
+@bot.command()
+async def あいうえお(ctx):
+    await ctx.send('あ'い'う'え'お')
+
 bot.run(token)
 @client.event
 async def on_message(message):
@@ -41,12 +46,4 @@ async def on_message(message):
         return
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
-        await message.channel.send('にゃーん')
-
-@client.event
-async def on_message(message):
-    if "おみくじ" in message.content:
-        word_list = ["大吉","中吉","小吉"]
-        await message.channel.send(random.choice(word_list))
-
-client.run("TOKEN")
+        await message.channel.send('にゃーん')t.run("TOKEN")
