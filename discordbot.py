@@ -37,8 +37,8 @@ async def こんばんは(ctx):
 @bot.command()
 async def あいうえお(ctx):
     await ctx.send('あ'い'う'え'お')
-
 bot.run(token)
+
 @client.event
 async def on_message(message):
     # メッセージ送信者がBotだった場合は無視する
