@@ -6,7 +6,7 @@ bot = commands.Bot(command_prefix='')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.command()
-async def ping(ctx):
+async def /ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
