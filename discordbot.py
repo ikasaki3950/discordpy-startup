@@ -33,10 +33,6 @@ async def こんにちは(ctx):
 @bot.command()
 async def こんばんは(ctx):
     await ctx.send('こんばんわに～')
-
-@bot.command()
-async def あいうえお(ctx):
-    await ctx.send('あ'い'う'え'お')
 bot.run(token)
 
 @client.event
