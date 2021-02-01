@@ -33,4 +33,8 @@ async def こんにちは(ctx):
 @bot.command()
 async def こんばんは(ctx):
     await ctx.send('こんばんわに～')
+    
+@bot.command()
+async def お金(ctx):
+    await ctx.send('ヒャッハー！！')
 bot.run(token)
